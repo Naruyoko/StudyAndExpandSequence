@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study and Expand Sequence</title>
+  <script src="./script.js"></script>
+</head>
+<body>
+  <h1>Study and Expand Sequence (仮)</h1>
+  <form name=form>
+    <textarea id="input" style="width:calc(100% - 8px);height:calc(100% - 28px);text-align:left;white-space:nowrap;margin:0;border:1px solid black;resize:both;font-family:monospace;font-size:13.5px;padding:4px;" oninput="requestAnimationFrame(handlekey)" contentEditable>1,4,16,19,16</textarea>
+    N <input id="inputn" type="text" oninput="requestAnimationFrame(handlekey)" value="3">
+    Max dimensions <input id="maxDimensions" type="number" min=0 value=10 step=1 oninput="requestAnimationFrame(handlekey)">
+    Remove limit to N<input id="noLimitToN" type="checkbox" oninput="requestAnimationFrame(handlekey)">
+    Auto <input id="automaticallyExpandOnChange" type="checkbox" checked oninput="requestAnimationFrame(handlekey)">
+    <input type="button" value="Expand" onclick="expandall(false)">
+  </form>
+  <textarea id="output" style="width:calc(100% - 8px);height:calc(100% - 28px);text-align:left;white-space:pre;margin:0;border:1px solid black;resize:both;font-family:monospace;font-size:13.5px;padding:4px;" readonly></textarea>
+  <input type="button" value="Randomize" onclick="generateRandom()">
+  <div id="errout"></div>
+  <div id="debugout" style="display:none"></div>
+  <div>"Inspired by ω-Y sequence by Yukito"</div>
+  <div>Version 1</div>
+</body>
+</html>
